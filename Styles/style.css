@@ -22,7 +22,7 @@
   
   
  /*  T E X T  */
- h1{
+h1{
   font-size: 3rem;
   font-weight: 600;
 }
@@ -37,35 +37,12 @@ h2{
 }
 
 #projects > h3{
-  margin-bottom: 1.4vh;
-}
-
-#projects > p{
-  margin-bottom:4.2vh;
+  margin-bottom: 3vh;
 }
 
 .porto-detail > h4
 {
   display: inline-block;
-}
-
-.porto-detail > a > p{
-  opacity: 50%;
-  opacity: 80%;
-  color: #61FF00;
-  margin: 0 0;
-  display: inline;
-}
-
-.porto-detail > a{
-  text-decoration: none;
-  width: fit-content;
-  height: fit-content;
-}
-
-.porto-detail > a:hover{
-  text-decoration: underline;
-  color: #61FF00;
 }
 
 span{
@@ -76,13 +53,20 @@ h1, h3, h4, p {
   margin-bottom:2.1vh;
 }
 
+#experiences h6{
+  opacity: 80%;
+}
+
+#experiences p{
+  opacity: 55%;
+}
+
 #contact-me > a{
   color: #61FF00;
   font-weight: 600;
 }
 
 .porto-detail > p {
-  width: 27.8vw;
   width: 25vw;
   word-break: break-word;
   white-space: normal;
@@ -91,8 +75,35 @@ h1, h3, h4, p {
 .porto-detail > h4{
  word-break: break-word;
  white-space: normal;
- width: 27.8vw;
  width: 25vw;
+}
+
+/* B U T T O N */
+.button-rounded > p{
+  opacity: 80%;
+  margin: 0 0;
+  display: inline;
+}
+
+.button-rounded{
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  border: 0.5px solid white;
+  border-radius: 5vw;
+  padding: 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.button-rounded:hover{
+  background-color: #61FF00;
+  border: none;
+}
+
+.button-rounded:hover p,
+.button-rounded:hover span,
+.button-rounded:hover i{
+  color: black;
 }
 
 /*  H E A D E R  */
@@ -129,11 +140,19 @@ header {
 /*  C O N T E N T  */
 .dots-right {
   transform: scaleX(-1);
+  right: -10%;
+  height: 100%;
 }
 
-.dots-right, 
-.dots-left
-{
+.dots-left {
+  left: -10%;
+  height: 100%;
+}
+
+.dots-box{
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
   height: 100vh;
   z-index: -5;
 }
@@ -152,7 +171,7 @@ header {
 }
 
 #home > .box{
-  margin: 0 9.8vw;
+  margin: 0 20vw;
 }
 
 .photo-profile{
@@ -160,23 +179,12 @@ header {
   margin-bottom: 2.1vh;
 }
 
-.skill-designer, .skill-developer{
-  width: fit-content;
-  font-weight: 500;
-  border-radius: 3.5vw;
-  margin: 0 0.4vw;
-  margin-bottom:1.4vh;
-  background-color: white;
-  color: black;
-  font-size: 0.875rem;
-}
-
 .porto-list{
   width: 100%;
-  height: fit-content;
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
+  padding-bottom: 1vh;
   margin-bottom: 6.9vh;
   align-items: flex-start;
 }
@@ -187,7 +195,6 @@ header {
 }
 
 .porto-card > a > img{
-  width: 27.8vw;
   width: 25vw;
   filter: grayscale(100%);
   transition: all 0.3s ease;
@@ -195,7 +202,7 @@ header {
   margin-bottom: 2.1vh;
 }
 
-.porto-card > a > img:hover{
+.porto-card:hover img{
   filter: none;
 } 
 
@@ -203,7 +210,6 @@ header {
   display: block;
   overflow-x: auto;
   white-space: nowrap;
-  width: 27.8vw;
   width: 25vw;
 }
 
@@ -212,12 +218,12 @@ header {
   overflow: hidden;
 } 
 
-.skill-designer2, .skill-developer2{
+.skill-designer, .skill-developer{
   width: fit-content;
   font-weight: 500;
   border-radius: 3.5vw;
   margin: 0 0.4vw;
-  padding: 0.2vh 0.9vw;
+  padding: 1px 10px;
   margin-bottom:1.4vh;
   background-color: white;
   color: black;
@@ -257,6 +263,28 @@ footer{
   display: inline-block;
 }
 
+
+/* P O R T O   D E T A I L S */
+.project-short-description,
+.project-details-title{
+  opacity: 50%;
+  font-weight: 400;
+}
+
+#project-image-highlight img{
+  width: 100%;
+  object-fit: cover;
+}
+
+#project-details, #project-description{
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+#project-image-list img{
+  object-fit: cover;
+  height: 100%;
+}
 
 /* R E S P O N S I V E */
  /* large screen  */
@@ -304,9 +332,16 @@ footer{
     background-image: none;
   } */
 
-  .dots-left,
-  .dots-right{
+  .dots-box{
     height: 90vh;
+  }
+
+  .dots-left{
+    left: -10%;
+  }
+
+  .dots-right{
+   right: -10%;
   }
 
   h1{
@@ -315,6 +350,12 @@ footer{
 
   .photo-profile{
     height: 22vh;
+  }
+
+  /* P O R T O   D E T A I L S */
+  #project-details, #project-description{
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 
@@ -360,9 +401,16 @@ footer{
       background-image: none;
     } */
 
-    .dots-left,
-    .dots-right{
+    .dots-box{
       height: 90vh;
+    }
+
+    .dots-left{
+      left: -10%;
+    }
+
+    .dots-right{
+      right: -10%;
     }
 
     h1{
@@ -375,6 +423,12 @@ footer{
 
     .porto-card > a > img{
       filter: none;
+    }
+
+    /* P O R T O   D E T A I L S */
+    #project-details, #project-description{
+      margin-left: 4.9vw;
+      margin-right: 4.9vw;
     }
 }
 
@@ -420,9 +474,16 @@ footer{
       background-image: none;
     } */
 
-    .dots-left,
-    .dots-right{
+    .dots-box{
       height: 90vh;
+    }
+
+    .dots-left{
+      left: -35%;
+    }
+
+    .dots-right{
+      right: -35%;
     }
 
     h1{
