@@ -81,7 +81,7 @@
               <a class="button-rounded" href="https://1drv.ms/b/c/416e9ea2c091fd9f/EVBRKc9ANnFEtMPjEnhbTfcB7fiPuiNG-AVawTGTCH4HCA?e=ixKVsA" target="_blank"><p><i class="bi bi-eye-fill"></i> View <span class="main-color">Juan's CV</span> <i class="bi bi-arrow-up-right"></i></p></a>
             </div>
           </div>
-          <div class="cssanimation hu__hu__" style="margin-top: 6vh">
+          <div class="cssanimation hu__hu__" style="margin-top: 6vh;cursor: pointer;" onclick="scrollToSection()">
             <i class="bi bi-arrow-down-circle-fill" style="font-size:2rem; opacity: 50%;"></i>
             <p style="font-size:1rem; font-weight:200; opacity: 50%;">Scroll down</p>
           </div>
@@ -378,7 +378,15 @@
              scrolly();
           }; 
        </script>
-      
+
+  <script>
+  function scrollToSection() {
+    const target = document.getElementById("projects");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+  </script>
     
     </body>
 </html>
